@@ -83,8 +83,8 @@ class BracketGame extends React.PureComponent<BracketGameProps> {
     const winnerBackground = (top && bottom && top.score && bottom.score && top.score.score !== bottom.score.score) ?
       (
         top.score.score > bottom.score.score ?
-          <rect x="170" y="12" width="100" height="22.5" style={{ fill: winningScoreBackground }} rx="3" ry="3"/> :
-          <rect x="170" y="34.5" width="100" height="22.5" style={{ fill: winningScoreBackground }} rx="3" ry="3"/>
+          <rect x="170" y="12" width="60" height="22.5" style={{ fill: winningScoreBackground }} rx="3" ry="3"/> :
+          <rect x="170" y="34.5" width="60" height="22.5" style={{ fill: winningScoreBackground }} rx="3" ry="3"/>
       ) :
       null;
 
@@ -124,7 +124,7 @@ class BracketGame extends React.PureComponent<BracketGameProps> {
       bottomHovered = (bottom && bottom.team && bottom.team.id === hoveredTeamId);
 
     return (
-      <svg width="300" height="82" viewBox="0 0 300 82" {...rest}>
+      <svg width="230" height="82" viewBox="0 0 230 82" {...rest}>
         {/* game time */}
         <text x="100" y="8" textAnchor="middle" style={gameTimeStyle}>
           {topText(game)}
@@ -143,7 +143,7 @@ class BracketGame extends React.PureComponent<BracketGameProps> {
               rx="3" ry="3"/>
 
         {/* scores background */}
-        <rect x="170" y="12" width="30" height="45" fill={scoreBackground} rx="3" ry="3"/>
+        <rect x="170" y="12" width="60" height="45" fill={scoreBackground} rx="3" ry="3"/>
 
         {/* winner background */}
         {winnerBackground}
