@@ -113,7 +113,7 @@ class BracketGame extends React.PureComponent<BracketGameProps> {
             </text>
           </RectClipped>
 
-          <text x={x + 185} y={y + 16} style={teamScoreStyle} textAnchor="middle">
+          <text x={x + 200} y={y + 16} style={teamScoreStyle} textAnchor="middle">
             {side.score ? side.score.score : null}
           </text>
         </g>
@@ -161,7 +161,7 @@ class BracketGame extends React.PureComponent<BracketGameProps> {
           ) : null
         }
 
-        <line x1="0" y1="34.5" x2="200" y2="34.5" style={teamSeparatorStyle}/>
+        <line x1="0" y1="34.5" x2="230" y2="34.5" style={teamSeparatorStyle}/>
 
         {/* game name */}
         <text x="100" y="68" textAnchor="middle" style={gameNameStyle}>
