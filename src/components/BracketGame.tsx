@@ -114,7 +114,7 @@ class BracketGame extends React.PureComponent<BracketGameProps> {
           </RectClipped>
 
           <text x={x + 185} y={y + 16} style={teamScoreStyle} textAnchor="middle">
-            {side.score ? "999" : null}
+            {side.score ? side.score.score : null}
           </text>
         </g>
       );
